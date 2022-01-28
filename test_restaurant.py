@@ -36,3 +36,14 @@ def test_remove_um_pedido_na_fila_vazia():
     restaurante = Restaurant("Pizzaria X")
     restaurante.remove_pedido()
     assert restaurante.pedidos_na_fila == 0
+
+
+def test_caixa_valor_inicial_padrao_igual_a_zero():
+    restaurante = Restaurant("Pizzaria X")
+    assert restaurante.caixa == 0
+
+
+def test_caixa_valor_inicial_maior_que_zero():
+    restaurante = Restaurant("Pizzaria X", 1)
+    assert restaurante.caixa == 1
+
