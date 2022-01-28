@@ -2,6 +2,9 @@ import pytest
 from restaurant import Restaurant
 
 
+# Para a execução dos testes assim que encontra uma falha:
+# > pytest test_restaurant -x
+
 def test_pedidos_na_fila_valor_inicial_padrao_igual_a_zero():
     restaurante = Restaurant("Pizzaria X")
     assert restaurante.pedidos_na_fila == 0
